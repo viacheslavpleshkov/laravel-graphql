@@ -4,10 +4,9 @@ type User {
     id: ID!
     name: String!
     email: String!
-    password: String!
-    posts: Post! @hasMany
     created_at: DateTime!
     updated_at: DateTime!
+    posts: [Post] @hasMany
 }
 
 type Post {
@@ -17,8 +16,8 @@ type Post {
     images: String!
     text: String!
     user: User! @belongsTo
+    category: Category! @belongsTo
     comments: [Comment] @hasMany
-    categories: Category! @belongsTo
     status: Int!
     created_at: DateTime!
     updated_at: DateTime!
@@ -28,17 +27,17 @@ type Category {
     id: ID!
     title: String!
     url: String!
+    posts: [Post] @hasMany
     status: Int!
-    posts: Post! @hasMany
     created_at: DateTime!
     updated_at: DateTime!
 }
 
-type Comment {
+type Comment{
     id: ID!
     reply: String!
-    status: Int!
     post: Post! @belongsTo
+    status: Int!
     created_at: DateTime!
     updated_at: DateTime!
 }
@@ -48,78 +47,9 @@ type Query {
     user (id: Int! @eq): User @find
     posts: [Post] @all
     post (id: Int! @eq): Post @find
-    categorys: [Category] @all
+    categories: [Category] @all
     category (id: Int! @eq): Category @find
     comments: [Comment] @all
     comment (id: Int! @eq): Comment @find
 
-}
-
-type Mutation {
-    createUser(
-        name: String @rules(apply: ["required", "max:3"])
-        email: String @rules(apply: ["required", "email"]),
-        password: String @rules(apply: ["required", "password"]),
-    ): User! @create
-
-    updateUser(
-        id: ID!,
-        email: String!,
-        password: String!
-    ): User @update
-
-    deleteUser(
-        id: ID!
-    ): User @delete
-
-    createPost(
-        title: String @rules(apply: ["required", "max:3"])
-        content: String @rules(apply: ["required", "email"]),
-        user: String @rules(apply: ["required", "password"]),
-        comments: String @rules(apply: [ "password"]),
-    ): Post! @create
-
-    updatePost(
-        id: ID!,
-        email: String!,
-        password: String!
-    ): Post @update
-
-    deletePost(
-        id: ID!
-    ): Post @delete
-
-    createCategory(
-        title: String @rules(apply: ["required", "max:3"])
-        content: String @rules(apply: ["required", "email"]),
-        user: String @rules(apply: ["required", "password"]),
-        comments: String @rules(apply: [ "password"]),
-    ): Category! @create
-
-    updateCategory(
-        id: ID!,
-        email: String!,
-        password: String!
-    ): Category @update
-
-    deleteCategory(
-        id: ID!
-    ): Category @delete
-
-    createComment(
-        title: String @rules(apply: ["required", "max:3"])
-        content: String @rules(apply: ["required", "email"]),
-        user: String @rules(apply: ["required", "password"]),
-        comments: String @rules(apply: [ "password"]),
-    ): Comment! @create
-
-    updateComment(
-        id: ID!,
-        email: String!,
-        password: String!
-    ): Comment @update
-
-    deleteComment(
-        id: ID!
-    ): Comment @delete
 }
