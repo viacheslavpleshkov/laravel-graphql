@@ -20,11 +20,9 @@
 1. Set your mail credentials in your `.env` file
 1. Set your `APP_URL` in your `.env` file
 1. Set your `APP_DEBUG` in your `.env` file with the value `true`
-1. Set your `TELESCOPE_ENABLED` in your `.env` file with the value `true`
+1. Set your `GRAPHQL_PLAYGROUND_ENABLED` in your `.env` file with the value `true`
 1. Run this command `php artisan config:cache`
 1. Run this command `php artisan db:seed`
-1. Run this command `yarn install`
-1. Run this command `yarn run dev`
 1. Run this command `php artisan serve` or use Laravel Valet or Laravel Homestead
 1. Visit `localhost:8000` in your browser
 
@@ -40,8 +38,7 @@
 1. Set your mail credentials in your `.env` file
 1. Set your `APP_URL` in your `.env` file
 1. Set your `APP_DEBUG` in your `.env` file with the value `false`
-1. Set your `TELESCOPE_ENABLED` in your `.env` file with the value `false`
+1. Set your `GRAPHQL_PLAYGROUND_ENABLED` in your `.env` file with the value `true`
 1. Run this command `php artisan config:cache`
 1. Run this command `php artisan db:seed`
-1. Run this command `yarn install`
-1. Run this command `yarn run production`
+1. Visit `https://laravelgraphql.slavapleshkov.com` in your browser
