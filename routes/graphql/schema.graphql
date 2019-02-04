@@ -1,11 +1,11 @@
-scalar DateTime @scalar(class: "DateTime")
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
 type User {
     id: ID!
     name: String!
     email: String!
     password: String!
-    posts: Post! @belongsTo
+    posts: Post! @hasMany
     created_at: DateTime!
     updated_at: DateTime!
 }
@@ -17,8 +17,8 @@ type Post {
     images: String!
     text: String!
     user: User! @belongsTo
-    categorys: [Category] @belongsTo
     comments: [Comment] @hasMany
+    categories: Category! @belongsTo
     status: Int!
     created_at: DateTime!
     updated_at: DateTime!
@@ -29,7 +29,7 @@ type Category {
     title: String!
     url: String!
     status: Int!
-    post: Post! @belongsTo
+    posts: Post! @hasMany
     created_at: DateTime!
     updated_at: DateTime!
 }

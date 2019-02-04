@@ -14,7 +14,7 @@ class Post extends Model
 	/**
 	 * @var string
 	 */
-	protected $table = 'posts';
+//	protected $table = 'posts';
 
 	/**
 	 * @var array
@@ -32,7 +32,7 @@ class Post extends Model
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
-	public function category()
+	public function categories()
 	{
 		return $this->belongsTo(Category::class);
 	}
