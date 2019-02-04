@@ -1,0 +1,10 @@
+"""This is a custom built-in Scalar type from LightHouse. It handles Carbon dates"""
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+type Comment {
+    id: ID!
+    reply: String!
+    post: Post! @belongsTo
+}
+#import user.graphql
+#import post/*.graphql
