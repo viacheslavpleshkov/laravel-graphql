@@ -16,6 +16,7 @@
 1. Run this command `composer install`
 1. Rename or copy `.env.example` file to `.env`
 1. Run this command `php artisan key:generate`
+1. Run this command `php artisan passport:install`
 1. Set your database credentials in your `.env` file
 1. Set your mail credentials in your `.env` file
 1. Set your `APP_URL` in your `.env` file
@@ -34,6 +35,7 @@
 1. Run this command `composer install`
 1. Rename or copy `.env.example` file to `.env`
 1. Run this command `php artisan key:generate`
+1. Run this command `php artisan passport:install`
 1. Set your database credentials in your `.env` file
 1. Set your mail credentials in your `.env` file
 1. Set your `APP_URL` in your `.env` file
@@ -41,4 +43,3 @@
 1. Set your `GRAPHQL_PLAYGROUND_ENABLED` in your `.env` file with the value `true`
 1. Run this command `php artisan config:cache`
 1. Run this command `php artisan db:seed`
-1. Visit `https://laravelgraphql.slavapleshkov.com` in your browser
