@@ -3,12 +3,13 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-	use Notifiable;
+	use HasApiTokens, Notifiable;
 
 	/**
 	 * @var array
@@ -30,6 +31,6 @@ class User extends Authenticatable
 	 */
 	public function posts()
 	{
-		return $this->hasMany(Post::class);
+		return $this->hasMany('App\Post');
 	}
 }
