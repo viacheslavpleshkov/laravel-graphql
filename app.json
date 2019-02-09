@@ -1,0 +1,104 @@
+{
+  "name": "Laravel GraphQL",
+  "description": "Laravel 5.7 Framework using GraphQL",
+  "repository": "https://github.com/slava-pleshkov/laravel-graphql",
+  "logo": "https://marmelab.com/images/blog/graphql/logo.png",
+  "keywords": [
+    "php",
+    "laravel",
+    "graphql"
+  ],
+  "env": {
+    "APP_NAME": {
+      "value": "Laravel GraphQL"
+    },
+    "APP_ENV": {
+      "value": "production"
+    },
+    "APP_KEY": {
+      "generator": "secret"
+    },
+    "APP_DEBUG": {
+      "value": "false"
+    },
+    "TELESCOPE_ENABLED": {
+      "value": "false"
+    },
+    "APP_URL": {
+      "generator": "secret"
+    },
+    "LOG_CHANNEL": {
+      "value": "stack"
+    },
+    "DB_CONNECTION": {
+      "value": "pgsql"
+    },
+    "DB_HOST": {
+      "generator": "secret"
+    },
+    "DB_PORT": {
+      "generator": "secret"
+    },
+    "DB_DATABASE": {
+      "generator": "secret"
+    },
+    "DB_USERNAME": {
+      "generator": "secret"
+    },
+    "DB_PASSWORD": {
+      "generator": "secret"
+    },
+    "BROADCAST_DRIVER": {
+      "value": "log"
+    },
+    "CACHE_DRIVER": {
+      "value": "file"
+    },
+    "SESSION_DRIVER": {
+      "value": "database"
+    },
+    "SESSION_LIFETIME": {
+      "value": "120"
+    },
+    "QUEUE_DRIVER": {
+      "value": "sync"
+    },
+    "MAIL_DRIVER": {
+      "generator": "secret"
+    },
+    "MAIL_HOST": {
+      "generator": "secret"
+    },
+    "MAIL_PORT": {
+      "generator": "secret"
+    },
+    "MAIL_USERNAME": {
+      "generator": "secret"
+    },
+    "MAIL_PASSWORD": {
+      "generator": "secret"
+    },
+    "MAIL_ENCRYPTION": {
+      "generator": "secret"
+    },
+    "MAIL_FROM_ADDRESS": {
+      "generator": "secret"
+    },
+    "MAIL_FROM_NAME": {
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ]
+}
