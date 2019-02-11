@@ -13,6 +13,7 @@
 ## Installation Dev
 
 1. Clone the repo and `cd` into it
+1. Create users and table in PostgreSQL
 1. Run this command `composer install`
 1. Rename or copy `.env.example` file to `.env`
 1. Run this command `php artisan key:generate`
@@ -57,7 +58,7 @@
 1. Run this command `heroku config:set APP_DEBUG=secret`
 1. Run this command `heroku config:set TELESCOPE_ENABLED=secret`
 1. Run this command `heroku config:set APP_URL=secret`
-1. Run this command `heroku config:set LOG_CHANNEL=stack`
+1. Run this command `heroku config:set LOG_CHANNEL=errorlog`
 1. Run this command `heroku config:set DB_CONNECTION=pgsql`
 1. Run this command `heroku config:set DB_HOST=secret`
 1. Run this command `heroku config:set DB_PORT=secret`
