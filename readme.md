@@ -10,6 +10,27 @@
 </p>
 <p align="center">🎼 Laravel 5.7 Framework using GraphQL</p>
 
+## Installation Dev (Vagrant)
+
+1. Clone the repo and `cd` into it
+1. Run this command `vagrant box add laravel/homestead`
+1. Run this command `composer install`
+1. Run this command Mac / Linux `bash init.sh` or Windows `init.bat`
+1. Rename or copy `.env.homestead` file to `.env`
+1. Set your amazon s3 credentials in your `.env` file
+1. Set your algolia credentials in your `.env` file
+1. Set your pusher credentials in your `.env` file
+1. Run this command `php artisan key:generate`
+1. Run this command `php artisan config:cache`
+1. Run this command `vagrant up`
+1. Run this command `vagrant ssh`
+1. Run this command `cd home/vagrant/code/`
+1. Run this command `php artisan migration`
+1. Run this command `php artisan db:seed`
+1. Run this command `yarn install`
+1. Run this command `yarn run dev`
+1. Visit `laravel-graphql.test` in your browser
+
 ## Installation Dev
 
 1. Clone the repo and `cd` into it
